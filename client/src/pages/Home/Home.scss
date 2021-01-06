@@ -1,0 +1,72 @@
+@use '../../partials/variables'as *;
+
+.homepage {
+  min-height: 100vh;
+  margin-top: 2rem;
+}
+
+.search-form {
+
+  padding: $global-padding;
+
+
+  &__circle {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  &__search-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  &__input-container {
+    width: 100%;
+  }
+
+  &__input {
+    padding: 0rem .5rem;
+    border: 1px solid color(input-borders);
+    border-radius: 4px;
+  }
+}
+
+.search-result {
+  padding: $global-padding;
+
+}
+
+.nominated-movies {
+  padding: $global-padding;
+
+}
+
+.search-result-items {
+  &__item {
+    margin-bottom: .5rem;
+  }
+
+  &__button {
+    padding: 2px 10px;
+
+    &>span {
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+}
+
+.nominated-movies-items {
+  &__item {
+    margin-bottom: .5rem;
+  }
+
+  &__button {
+    padding: 2px 10px;
+
+    &>span {
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+}
