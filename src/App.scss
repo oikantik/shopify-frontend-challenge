@@ -1,0 +1,6 @@
+@use './partials/variables'as *;
+@use './partials/mixins'as *;
+
+body {
+  background-color: color(global-gray) !important;
+}
