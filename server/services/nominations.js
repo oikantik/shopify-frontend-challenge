@@ -9,7 +9,7 @@ module.exports = {
   },
   write: async ({ nominations }) => {
     const nomination = new Nomination({
-      nominations,
+      ...nominations,
     });
     const data = await nomination.save();
     return data;

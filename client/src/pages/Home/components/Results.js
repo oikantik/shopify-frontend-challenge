@@ -31,7 +31,13 @@ function Results({
   const resultsContainer = results.map((result) => {
     return (
       <li key={result.imdbID} className='search-result-items__item'>
-        {result.Title} ({result.Year}){" "}
+        <a
+          href={"https://www.imdb.com/title/" + result.imdbID}
+          rel='noreferrer'
+          target='_blank'
+          className='search-result-items__item-link'>
+          {result.Title} ({result.Year})
+        </a>{" "}
         <Button
           variant='outlined'
           className='search-result-items__button'

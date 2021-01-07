@@ -5,7 +5,7 @@ import {
   Collapse,
   IconButton,
 } from "@material-ui/core";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Proptypes from "prop-types";
 import { Close as CloseIcon } from "@material-ui/icons";
@@ -23,9 +23,13 @@ function Nominations({ success, loading, result }) {
     result.map((item) => {
       return (
         <li className='nominated-movies-items__item' key={item.imdbID}>
-          <Fragment>
+          <a
+            href={"https://www.imdb.com/title/" + item.imdbID}
+            rel='noreferrer'
+            target='_blank'
+            className='nominated-movies-items__item-link'>
             {item.Title} ({item.Year}){" "}
-          </Fragment>
+          </a>
         </li>
       );
     });
