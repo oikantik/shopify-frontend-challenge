@@ -1,5 +1,3 @@
-const fs = require("fs");
-const path = require("path");
 const Nomination = require("../models/Nomination");
 
 module.exports = {
@@ -7,11 +5,13 @@ module.exports = {
     const data = await Nomination.findById({ _id: id });
     return data;
   },
-  write: async ({ nominations }) => {
+  write: async (nominations) => {
+    console.log(nominations);
     const nomination = new Nomination({
-      ...nominations,
+      nominations,
     });
     const data = await nomination.save();
+    console.log(data);
     return data;
   },
   update: async ({ nominations, id }) => {
