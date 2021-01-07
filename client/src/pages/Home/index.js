@@ -1,6 +1,6 @@
 import Home from "./Home";
 import { connect } from "react-redux";
-import { search, nominate } from "./redux/actions";
+import { search, nominate, remove, save } from "./redux/actions";
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -11,11 +11,22 @@ const mapDispatchToProps = (dispatch) => {
     handleNominate: (payload) => {
       dispatch(nominate(payload));
     },
+    handleRemove: (payload) => {
+      dispatch(remove(payload));
+    },
+    handleSave: (payload) => {
+      dispatch(save(payload));
+    },
   };
 };
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    searchResults: state.searchResult.results,
+    nominationCount: state.searchResult.nominate.result.length,
+    nominations: state.searchResult.nominate.result,
+    savedId: state.searchResult.savedNomination.savedId,
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

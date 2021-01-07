@@ -2,7 +2,7 @@
 
 .homepage {
   min-height: 100vh;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .search-form {
@@ -68,5 +68,11 @@
       font-weight: 400;
       text-transform: none;
     }
+  }
+}
+
+.navbar {
+  &__grow {
+    flex-grow: 1;
   }
 }

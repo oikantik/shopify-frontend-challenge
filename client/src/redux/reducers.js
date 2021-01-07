@@ -1,3 +1,4 @@
 import { combineReducers } from "redux";
 import searchResult from "../pages/Home/redux/reducers";
-export default combineReducers({ searchResult });
+import nominatedMovies from "../pages/Nomination/redux/reducers";
+export default combineReducers({ searchResult, nominatedMovies });

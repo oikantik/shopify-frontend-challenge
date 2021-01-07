@@ -8,3 +8,7 @@ export const axiosInstance = axios.create({
     page: 1,
   },
 });
+
+export const axiosInstanceForLocalApi = axios.create({
+  baseURL: process.env.REACT_APP_API_URL_SAVE_SHARE,
+});

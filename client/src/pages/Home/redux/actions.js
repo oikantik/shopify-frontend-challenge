@@ -13,3 +13,17 @@ export const nominate = (payload) => {
     payload,
   };
 };
+
+export const remove = (payload) => {
+  return {
+    type: types.REMOVE_NOMINATION,
+    payload,
+  };
+};
+
+export const save = (payload) => {
+  return {
+    type: types.SAVE_NOMINATION,
+    payload,
+  };
+};

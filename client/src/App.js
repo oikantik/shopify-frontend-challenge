@@ -4,6 +4,8 @@ import Home from "./pages/Home/";
 import { CssBaseline } from "@material-ui/core";
 import { Provider } from "react-redux";
 import store from "./redux";
+import "react-toastify/dist/ReactToastify.css";
+import Nomination from "./pages/Nomination";
 
 function App() {
   return (
@@ -11,9 +13,8 @@ function App() {
       <BrowserRouter>
         <CssBaseline />
         <Switch>
-          <Route>
-            <Home />
-          </Route>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/:id' component={Nomination} />
         </Switch>
       </BrowserRouter>
     </Provider>

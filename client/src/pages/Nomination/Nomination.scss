@@ -1,0 +1,20 @@
+@use '../../partials/variables'as *;
+
+.nominated-movies-page {
+  min-height: 100vh;
+  margin-top: 6rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    margin-right: 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform .5s ease-in-out;
+    }
+  }
+}
