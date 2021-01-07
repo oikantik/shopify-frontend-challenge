@@ -8,7 +8,7 @@ module.exports = {
   write: async (nominations) => {
     console.log(nominations);
     const nomination = new Nomination({
-      nominations,
+      ...nominations,
     });
     const data = await nomination.save();
     console.log(data);

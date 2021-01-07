@@ -13,7 +13,7 @@ export const search = async (searchTerm) => {
 export const save = async (payload) => {
   if (!payload.id) {
     const response = await axiosInstanceForLocalApi.post("/", {
-      ...payload.nominations,
+      nominations: [...payload.nominations],
     });
     if (response.data.Error) {
       throw new Error(response.data.Error);
