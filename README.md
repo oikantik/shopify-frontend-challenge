@@ -14,8 +14,11 @@ Please make sure to create an account in mongodb and create a `.env` file in the
 Then please: 
 
 run `npm start` in `client` folder
+
 run `npm run dev` in `server` folder
 
 **Live Demo**
 
 [Click Here](https://shopify-challenge-01.netlify.app/) for the demo.
+
+If search result is not loading, chances are my API quota hit its limit, let me know please or generate new API key for your app [here](http://www.omdbapi.com/apikey.aspx) and replace it in `client` folder. 
